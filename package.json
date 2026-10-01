@@ -1,0 +1,22 @@
+{
+  "name": "fat16-inspector",
+  "version": "1.0.0",
+  "description": "Local-only FAT16 image directory parser and cluster-chain consistency checker (API + CLI).",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --experimental-sqlite --test --import tsx test/*.test.ts",
+    "server": "node --experimental-sqlite --import tsx scripts/start-server.ts",
+    "stop": "node --experimental-sqlite --import tsx scripts/stop-server.ts",
+    "cli": "node --no-warnings --experimental-sqlite --import tsx src/cli/main.ts",
+    "demo": "node --experimental-sqlite --import tsx scripts/demo.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
